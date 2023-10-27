@@ -1,0 +1,1 @@
+# Django website in 15 min for teaching

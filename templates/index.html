@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>My Blog</title>
+</head>
+<body>
+    <h1>Welcome To My Blog</h1>
+    <div>
+        {% for article in articles %}
+        <div>    
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.content }}</p>
+            <span>Published on: {{ article.created_date }}</span>
+            <span>Updated on: {{ article.updated_date }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
